@@ -2,3 +2,4 @@ config_useRoundIcon
 config_swipe_up_gesture_setting_available
 config_cameraDoubleTapPowerGestureEnabled
 config_doublePressOnPowerBehavior
+status_bar_height

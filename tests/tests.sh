@@ -20,7 +20,7 @@ find -name AndroidManifest.xml |while read manifest;do
 	folder="$(dirname "$manifest")"
 	#Ensure this overlay doesn't override blacklist-ed properties
 	for b in $(cat tests/blacklist);do
-		if grep -qRF "$b" $folder;then
+		if grep -qRF "\"$b\"" $folder;then
 			fail $folder "Overlay $folder is defining $b which is forbidden"
 		fi
 	done
